@@ -1,0 +1,14 @@
+# Project exclude paths
+/Client/target/
+/Server/target/
+/dubbodemo/target/
+.idea/
+*.iml
+.project
+.settings/
+.classpath
+target/
+src/main/webapp/WEB-INF/classes/
+.externalToolBuilders/
+/target/
+.DS_Store
