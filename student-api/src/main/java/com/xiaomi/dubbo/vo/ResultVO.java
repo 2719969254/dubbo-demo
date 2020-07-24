@@ -2,7 +2,7 @@ package com.xiaomi.dubbo.vo;
 
 import java.io.Serializable;
 
-public class  ResultVO<T> implements Serializable{
+public class ResultVO<T> implements Serializable {
     private T data;
     private String msg;
     private String status;
@@ -20,6 +20,9 @@ public class  ResultVO<T> implements Serializable{
         return data;
     }
 
+    /**
+     * @param data
+     */
     public void setData(T data) {
         this.data = data;
     }
@@ -38,5 +41,14 @@ public class  ResultVO<T> implements Serializable{
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "ResultVO{" +
+                "data=" + data +
+                ", msg='" + msg + '\'' +
+                ", status='" + status + '\'' +
+                '}';
     }
 }

@@ -15,12 +15,10 @@ public class StudentController{
     @Resource
     private StudentService studentService;
     @ResponseBody
-    @RequestMapping("/getData")
+    @RequestMapping(path = "/getData",produces={"application/json"})
     public ResultVO<Student> getData(String name){
         ResultVO<Student> studentByName = studentService.getStudentByName(name);
-        Student student = studentByName.getData();
-        logger.info("+++++++++返回码是："+studentByName.getStatus()+" name:"+student.getName()+" resultSet:"+student.getSex());
-
+        logger.info(studentByName.toString());
         return studentByName;
     }
 }
